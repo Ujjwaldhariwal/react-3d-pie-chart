@@ -1,24 +1,50 @@
-import logo from './logo.svg';
+import React from 'react';
+import Header from './components/UI/Header';
+import Dashboard from './components/Layout/Dashboard';
+import { useChartData } from './hooks/useChartData';
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
+import './styles/globals.css';
 import './App.css';
 
 function App() {
+  const {
+    data,
+    isAnimating,
+    toggleAnimation
+  } = useChartData();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen gradient-bg">
+      <Header 
+        isAnimating={isAnimating}
+        toggleAnimation={toggleAnimation}
+      />
+      
+      <Dashboard 
+        data={data}
+        isAnimating={isAnimating}
+      />
+      
+      {/* Footer */}
+      <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 mt-12">
+        <div className="container mx-auto px-6 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 text-sm">
+              © 2024 3D Analytics Dashboard. Built with React Three Fiber & Tailwind CSS.
+            </div>
+            <div className="flex items-center space-x-4 mt-4 md:mt-0">
+              <div className="flex items-center space-x-2 text-sm text-gray-400">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span>System Status: Operational</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
     </div>
+    
   );
 }
 
