@@ -15,22 +15,22 @@ function CollapsibleSection({
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 mb-4">
+    <div className="bg-white rounded-lg shadow-sm border border-gray-300 mb-4">
       {/* Header */}
       <div 
-        className="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50 transition-colors duration-200"
+        className="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-100 transition-colors duration-200"
         onClick={toggleOpen}
       >
         <div className="flex items-center space-x-3">
           {icon && (
             <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-blue-100">
-              <span className="text-blue-600 text-lg">{icon}</span>
+              <span className="text-blue-700 text-lg">{icon}</span>
             </div>
           )}
           <div>
-            <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+            <h3 className="text-lg font-semibold text-black">{title}</h3>
             {subtitle && (
-              <p className="text-sm text-gray-500 mt-1">{subtitle}</p>
+              <p className="text-sm text-gray-800 mt-1">{subtitle}</p>
             )}
           </div>
         </div>
@@ -44,9 +44,9 @@ function CollapsibleSection({
             }}
           >
             {isOpen ? (
-              <ChevronUpIcon className="h-5 w-5 text-gray-500" />
+              <ChevronUpIcon className="h-5 w-5 text-gray-800" />
             ) : (
-              <ChevronDownIcon className="h-5 w-5 text-gray-500" />
+              <ChevronDownIcon className="h-5 w-5 text-gray-800" />
             )}
           </button>
         </div>
@@ -58,7 +58,7 @@ function CollapsibleSection({
           isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="p-4 pt-0 border-t border-gray-100">
+        <div className="p-4 pt-0 border-t border-gray-200">
           {children}
         </div>
       </div>

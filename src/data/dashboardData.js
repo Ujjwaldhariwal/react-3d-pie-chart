@@ -1,58 +1,58 @@
-// Sample data for different sections
+// Updated sample data with aesthetic high-contrast colors
 export const connectDisconnectData = [
-  { id: 1, label: 'Connected', value: 375095, color: '#10B981' },
-  { id: 2, label: 'Disconnected', value: 3835, color: '#EF4444' },
-  { id: 3, label: 'Communication', value: 2500, color: '#3B82F6' },
-  { id: 4, label: 'Non Communication', value: 1200, color: '#F59E0B' }
+  { id: 1, label: 'Connected', value: 375095, color: '#22C55E' },
+  { id: 2, label: 'Disconnected', value: 3835, color: '#F43F5E' },
+  { id: 3, label: 'Communication', value: 2500, color: '#2563EB' },
+  { id: 4, label: 'Non Communication', value: 1200, color: '#FACC15' }
 ];
 
 export const communicationStatusData = {
   fdr: [
-    { id: 1, label: 'On Line Meters', value: 85, color: '#0EA5E9' },
-    { id: 2, label: 'Off Line Meters', value: 15, color: '#F97316' }
+    { id: 1, label: 'On Line Meters', value: 85, color: '#06B6D4' },
+    { id: 2, label: 'Off Line Meters', value: 15, color: '#FB923C' }
   ],
   dtr: [
-    { id: 1, label: 'On Line Meters', value: 92, color: '#0EA5E9' },
-    { id: 2, label: 'Off Line Meters', value: 8, color: '#F97316' }
+    { id: 1, label: 'On Line Meters', value: 92, color: '#06B6D4' },
+    { id: 2, label: 'Off Line Meters', value: 8, color: '#FB923C' }
   ],
   consumer: [
-    { id: 1, label: 'On Line Meters', value: 78, color: '#0EA5E9' },
-    { id: 2, label: 'Off Line Meters', value: 22, color: '#F97316' }
+    { id: 1, label: 'On Line Meters', value: 78, color: '#06B6D4' },
+    { id: 2, label: 'Off Line Meters', value: 22, color: '#FB923C' }
   ]
 };
 
 export const disconnectionAgeingData = [
-  { id: 1, label: 'Less than 2 Months', value: 45, color: '#06B6D4' },
-  { id: 2, label: 'More than 2 Months', value: 25, color: '#8B5CF6' },
-  { id: 3, label: 'Between 30 and 15', value: 15, color: '#10B981' },
-  { id: 4, label: 'Between 15 and 7', value: 10, color: '#F59E0B' },
-  { id: 5, label: 'Less than 7', value: 5, color: '#EF4444' }
+  { id: 1, label: 'Less than 2 Months', value: 45, color: '#0EA5E9' },
+  { id: 2, label: 'More than 2 Months', value: 25, color: '#A855F7' },
+  { id: 3, label: 'Between 30 and 15', value: 15, color: '#22C55E' },
+  { id: 4, label: 'Between 15 and 7', value: 10, color: '#FACC15' },
+  { id: 5, label: 'Less than 7', value: 5, color: '#F43F5E' }
 ];
 
 export const monthlyPFStatusData = [
-  { id: 1, label: 'PF Between 0.9 and 1', value: 60, color: '#10B981' },
-  { id: 2, label: 'PF Between 0.85 and 0.9', value: 25, color: '#F59E0B' },
-  { id: 3, label: 'PF Less than 0.85', value: 15, color: '#EF4444' }
+  { id: 1, label: 'PF Between 0.9 and 1', value: 60, color: '#22C55E' },
+  { id: 2, label: 'PF Between 0.85 and 0.9', value: 25, color: '#FACC15' },
+  { id: 3, label: 'PF Less than 0.85', value: 15, color: '#F43F5E' }
 ];
 
 export const outageStatusData = {
   duration: [
-    { id: 1, label: 'Duration 0-5', value: 30, color: '#3B82F6' },
-    { id: 2, label: 'Duration 5-10', value: 25, color: '#10B981' },
-    { id: 3, label: 'Duration 10-60', value: 35, color: '#F59E0B' },
-    { id: 4, label: 'Duration >60', value: 10, color: '#EF4444' }
+    { id: 1, label: 'Duration 0-5', value: 30, color: '#2563EB' },
+    { id: 2, label: 'Duration 5-10', value: 25, color: '#22C55E' },
+    { id: 3, label: 'Duration 10-60', value: 35, color: '#FACC15' },
+    { id: 4, label: 'Duration >60', value: 10, color: '#F43F5E' }
   ],
   maxOutage: [
-    { id: 1, label: 'Duration 0-5', value: 20, color: '#3B82F6' },
-    { id: 2, label: 'Duration 5-10', value: 30, color: '#10B981' },
-    { id: 3, label: 'Duration 10-60', value: 40, color: '#F59E0B' },
-    { id: 4, label: 'Duration >60', value: 10, color: '#EF4444' }
+    { id: 1, label: 'Duration 0-5', value: 20, color: '#2563EB' },
+    { id: 2, label: 'Duration 5-10', value: 30, color: '#22C55E' },
+    { id: 3, label: 'Duration 10-60', value: 40, color: '#FACC15' },
+    { id: 4, label: 'Duration >60', value: 10, color: '#F43F5E' }
   ]
 };
 
 export const installedMetersData = [
-  { id: 1, label: 'Consumer', value: 85, color: '#0EA5E9' },
-  { id: 2, label: 'Others', value: 15, color: '#F97316' }
+  { id: 1, label: 'Consumer', value: 85, color: '#06B6D4' },
+  { id: 2, label: 'Others', value: 15, color: '#FB923C' }
 ];
 
 // Dashboard sections configuration
