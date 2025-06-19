@@ -1,24 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/UI/Header';
 import Dashboard from './components/Layout/Dashboard';
+import CollapsibleDashboard from './components/Layout/CollapsibleDashboard';
 import { useChartData } from './hooks/useChartData';
-import Highcharts from 'highcharts';
-import HighchartsReact from 'highcharts-react-official';
 import './styles/globals.css';
 import './App.css';
 
 function App() {
+  const [viewMode, setViewMode] = useState('collapsible'); // 'standard' or 'collapsible'
   const {
     data,
     isAnimating,
     toggleAnimation
   } = useChartData();
 
+  const toggleViewMode = () => {
+    setViewMode(prev => prev === 'standard' ? 'collapsible' : 'standard');
+  };
+
+  if (viewMode === 'collapsible') {
+    return <CollapsibleDashboard />;
+  }
+
   return (
     <div className="min-h-screen gradient-bg">
       <Header 
         isAnimating={isAnimating}
         toggleAnimation={toggleAnimation}
+        viewMode={viewMode}
+        toggleViewMode={toggleViewMode}
       />
       
       <Dashboard 
@@ -34,6 +44,12 @@ function App() {
               © 2024 3D Analytics Dashboard. Built with React Three Fiber & Tailwind CSS.
             </div>
             <div className="flex items-center space-x-4 mt-4 md:mt-0">
+              <button
+                onClick={toggleViewMode}
+                className="px-3 py-2 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
+              >
+                Switch to {viewMode === 'standard' ? 'Collapsible' : 'Standard'} View
+              </button>
               <div className="flex items-center space-x-2 text-sm text-gray-400">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <span>System Status: Operational</span>
@@ -42,9 +58,7 @@ function App() {
           </div>
         </div>
       </footer>
-    
     </div>
-    
   );
 }
 

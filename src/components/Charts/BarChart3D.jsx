@@ -216,3 +216,4 @@ function BarChart3D({ data, labelStyle = 'front' }) {
 }
 
 export default BarChart3D;
+
