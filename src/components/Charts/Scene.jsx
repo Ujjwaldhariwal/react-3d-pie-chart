@@ -19,13 +19,29 @@ function Scene({ data, isAnimating, chartType = 'pie' }) {
 
   return (
     <>
+      {/* Lighting */}
       <ambientLight intensity={0.6} />
+      <directionalLight
+        castShadow
+        position={[5, 10, 5]}
+        intensity={1}
+        shadow-mapSize-width={1024}
+        shadow-mapSize-height={1024}
+        shadow-camera-far={50}
+      />
       <pointLight position={[10, 10, 10]} intensity={1} />
       <pointLight position={[-10, -10, -10]} intensity={0.5} />
-      <directionalLight position={[5, 5, 5]} intensity={0.3} castShadow />
-      
+
+      {/* Chart */}
       {renderChart()}
-      
+
+      {/* Soft Ground Plane for Shadows */}
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.05, 0]} receiveShadow>
+        <planeGeometry args={[20, 20]} />
+        <shadowMaterial transparent opacity={0.2} />
+      </mesh>
+
+      {/* Controls */}
       <OrbitControls
         enablePan={true}
         enableZoom={true}
@@ -38,8 +54,5 @@ function Scene({ data, isAnimating, chartType = 'pie' }) {
     </>
   );
 }
-
-
-  
 
 export default Scene;

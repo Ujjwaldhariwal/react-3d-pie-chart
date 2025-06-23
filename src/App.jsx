@@ -7,7 +7,7 @@ import './styles/globals.css';
 import './App.css';
 
 function App() {
-  const [viewMode, setViewMode] = useState('collapsible'); // 'standard' or 'collapsible'
+  const [viewMode, setViewMode] = useState('collapsible'); 
   const {
     data,
     isAnimating,
